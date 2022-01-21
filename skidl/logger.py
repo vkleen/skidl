@@ -208,10 +208,10 @@ def _create_logger(title, log_msg_id="", log_file_suffix=".log"):
     logger.addHandler(handler)
 
     # Errors and warnings are stored in a log file with the top-level script's name.
-    handler = SkidlLogFileHandler(get_script_name() + log_file_suffix, mode="w")
-    handler.setLevel(logging.WARNING)
-    handler.setFormatter(logging.Formatter(log_msg_id + "%(levelname)s: %(message)s"))
-    logger.addHandler(handler)
+    # handler = SkidlLogFileHandler(get_script_name() + log_file_suffix, mode="w")
+    # handler.setLevel(logging.WARNING)
+    # handler.setFormatter(logging.Formatter(log_msg_id + "%(levelname)s: %(message)s"))
+    # logger.addHandler(handler)
 
     # Set logger to trigger on info, warning, and error messages.
     logger.setLevel(logging.INFO)
